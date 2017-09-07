@@ -1,0 +1,71 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="corticaldata-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      
+      .toolbar {
+        margin-bottom: 0;
+        background-color: #ffffff;
+        min-height: 50px;
+      }
+
+      .toolbar-container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #333;
+        display: block;
+      }
+    </style>
+
+    <div class="toolbar">
+      <div class="toolbar-container">
+        <div class="toolbar-header">
+          <button class="menu-toggle"></button>
+          <ul class="actions">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+          </ul>
+          <a>[[prop1]]</a>
+        </div>
+        <div class="toolbar-menu">
+          <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    /**
+     * `corticaldata-header`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class CorticaldataHeader extends Polymer.Element {
+      static get is() { return 'corticaldata-header'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'corticaldata-header'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(CorticaldataHeader.is, CorticaldataHeader);
+  </script>
+</dom-module>
